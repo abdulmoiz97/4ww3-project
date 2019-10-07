@@ -1,0 +1,62 @@
+/* navbar background set */
+nav {
+    background-color: #f0f0f0;
+}
+
+/* container for gym details such as reviews, description etc... Margins added so it does not stay flush with the header or footer */
+#gymContainer {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* styling added to the Bootstrap jumbotron. Includes a semi transparent background image and white text color */
+#gymHeader {
+    background-image: url("../images/gymHeaderBG.jpg");
+    opacity: 0.7;
+    background-size: cover;
+    color: white;
+}
+
+/* Simple styling to the container for reviews. Ensures reviews appear flush to the left and that bullet points are omitted for the listed
+reviews (using li's) within. */
+#reviews {
+    padding-left: 0px;
+    list-style-type: none;
+}
+
+/* Actual review items are given a bottom border for styling and separation. Height is hard coded so it is still readable and aesthetically
+pleasing when viewport is scaled down in size. Flex display used to vertically center contents within */
+#reviews li{
+    border-bottom: solid 1px #e6e6e6;
+    height: 170px;
+    padding: 10px;
+    display: flex;
+    align-items: center; 
+}
+
+/* Simple sizing of image. Border radius applied for circular images and inline block used as display to ensure it is flush to the left and
+text content can appear beside the image. */
+#reviews img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Container for details in the review given a margin to prevent the text being flush next to the image */
+.details {
+    margin-left: 20px;
+    display: inline-block;
+}
+
+.details p {
+    font-size: 12px;
+}
+
+/* Simple styling to "Reviews" heading. */
+h2{
+    border-top: solid 1px #e6e6e6;
+    padding-top: 10px;
+    text-align: center;
+}

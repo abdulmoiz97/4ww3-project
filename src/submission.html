@@ -1,0 +1,101 @@
+<!-- 
+    Authors: Abdul Moiz & Mohid Makhdoomi
+ -->
+ <!-- Standard HTML-5 Boilerplate -->
+ <!DOCTYPE html>
+ <!-- Root element with language declaration -->
+ <html lang="en">
+     <!-- Meta data container -->
+     <head>
+         <!-- Meta data to ensure compatability with varying devices, viewports and character sets -->
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+         <link rel="stylesheet" href="../styles/common.css">
+         <link rel="stylesheet" href="../styles/submission.css">
+         <!-- Favicon for browser tab display (aesthetic purposes) -->
+         <link rel="icon" href="../images/favicon.png">
+         <!-- Bootstrap CDN to prevent website from looking hideous with approval from TA Yu -->
+         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+         <!-- Google fonts import -->
+         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">         
+         <!-- Title tag for labeling in tab names of browsers -->
+         <title>Fit Finder</title>
+     </head>
+     <!-- Core content of page in body tag -->
+     <body>
+        <!-- This division is reversed for a reusable navigation menu with 4 links: register, log in, submit a gym and going to the home page -->
+        <div class="centered" id="header">
+            <!-- HTML5 nav is used along with styling from bootstraps navbar classes. navbar-expand ensures that the navbar cannot collapse.
+            A collapsing or "hamburger" navbar requires jQuery and js thus it was omitted from this part of the assignment -->
+            <nav class="navbar navbar-expand navbar-dark fixed-top centered">
+                <!-- an anchor tag is used to contain a hyperlinked logo for the website -->
+                <a class="navbar-brand" href="../src/search.html">
+                    <!-- the d-inlin-block and align-top classes are from the Bootstrap framework and ensure the image is flush to the left of the
+                    navbar -->
+                    <img src="../images/favicon.png" id="navBrandIcon" alt="Fit Finder" class="d-inline-block align-top">
+                    Fit Finder
+                </a>
+                <!-- The submit a gym link is done through a standard navbar anchor tag with Bootstrap styling. mr-auto class ensures that all elements
+                added to the right of the anchor tag are flush to the right of the navbar -->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../src/submission.html">Submit a Gym</a>
+                    </li>
+                </ul>
+                <!-- Nav buttons are also contained in a similar unordered list. The buttons are styled using bootstraps btn class-->
+                <ul id="navButtons" class="nav navbar-nav">
+                    <li><button class="btn btn-success btn-sm">Login</button></li>
+                    <li><button class="btn btn-success btn-sm">Register</button></li>
+                </ul>
+            </nav>
+        </div>
+        
+         <!-- Container of the actual gym submission form is used to style the image around the form for aesthetic purposes. -->
+         <div class="centered" id="formContainer">
+             <div id="formBox">
+                 <!-- Form not given an action as the back end is not part of part 1 -->
+                 <form class="rounded">
+                     <!-- Similar to the search form a simple bootstrap styled form tag is used. The simplest and logical input type is
+                    used for each of the various required inputs. eg. Latitude is number, Description is a larger textarea etc... -->
+                     <div class="form-row">
+                         <div class="form-group col-md-4">
+                             <label for="gymName">Gym Name</label>
+                             <input type="text" class="form-control" id="gymName">
+                         </div>
+                         <div class="form-group col-md-4">
+                             <label for="longitude">Longitude</label>
+                             <input type="number" class="form-control" id="longitude">
+                         </div>
+                         <div class="form-group col-md-4">
+                             <label for="latitude">Latitude</label>
+                             <input type="number" class="form-control" id="latitude">
+                         </div>
+                    </div>
+                    <!-- Separate form groups were used to ensure everything is aeshetically laid out. This is done to mimic the layout
+                    of an actual hand filled form. -->
+                    <div class="form-group">
+                        <label for="description">Gym Description</label>
+                        <textarea class="form-control" id="description" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Images</label>
+                        </div>
+                    </div>
+                 <div id="submitButton">
+                     <button type="submit" class="btn btn-success btn-block">Submit</button>
+                 </div>
+                 </form>
+             </div>
+         </div>
+ 
+        <!-- Footer for webpage simply has copy write information -->
+        <div class="centered" id="footer">
+            <!-- &copy is used to ensure we can insert it in a regular paragraph tag -->
+            <p>&copy; 2019 McMaster University. All Rights Reserved.</p>
+        </div>
+
+     </body>
+ </html>

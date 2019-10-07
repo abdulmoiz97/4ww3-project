@@ -1,0 +1,47 @@
+/* navbar background set */
+nav {
+    background-color: #f0f0f0;
+}
+
+/* container for results details such as reviews, description etc... Margins added so it does not stay flush with the header or footer */
+#resultsContainer {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Simple styling to the container for tabular results. Ensures results appear flush to the left and that bullet points are omitted for the listed
+results (using li's) within. */
+#tabular {
+    padding-left: 0px;
+    list-style-type: none;
+}
+
+/* Actual result items are given a bottom border for styling and separation. Height is hard coded so it is still readable and aesthetically
+pleasing when viewport is scaled down in size. Flex display used to vertically center contents within */
+#tabular li{
+    border-bottom: solid 1px #e6e6e6;
+    height: 170px;
+    padding: 10px;
+    display: flex;
+    align-items: center; 
+}
+
+/* Simple sizing of image. Border radius applied for curved image edges and inline block used as display to ensure it is flush to the left and
+text content can appear beside the image. */
+#tabular img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5%;
+    display: inline-block;
+}
+
+/* Container for details in the review given a margin to prevent the text being flush next to the image */
+.details {
+    margin-left: 20px;
+    display: inline-block;
+}
+
+p {
+    font-size: 12px;
+}
