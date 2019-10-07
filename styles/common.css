@@ -3,31 +3,42 @@ div{
     font-family: 'Montserrat'
 }
 
+/* Takes any element and sets top margin to 0 and then auto for horizontal margins thus centering it in a responsive manner */
+.centered{
+    margin: 0px auto;
+}
+
 /* Scaling all images to their parents to ensure the image is also responsive */
 #googleMaps {
     width: 100%;
 }
 
+/* All form containers are set to the maximum height of the view port and then displayed as flex to allow for vertical and horizontal
+centering of the forms within */
 #formContainer {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center; 
     background-image: url("../images/heroImage.jpg");
-    background-repeat: no-repeat;
     background-size: cover;
 }
 
+/* Container for all submit buttons on the webpage. This is displayed as flex to allow for the buttons within to be centered vertically and
+horizontally */
 #submitButton {
     display: flex;
     justify-content: center;
     align-items: center; 
 }
 
+/* All form boxes are set to be half the size of their parent containers for aesthetic sizing */
 #formBox {
     width: 50%;
 }
 
+/* Footers are simply a bar along the bottom of the webpage. Absolute positioning is used to be able to add content dynamically and
+still have it "stick" to the bottom of the webpage*/
 #footer {
     width: 100%;
     position: fixed;
@@ -39,22 +50,17 @@ div{
     background-color: #f0f0f0;
 }
 
-.centered{
-    margin: 0px auto;
-}
-
 #footer p{
     margin-top: 10px;
 }
 
-nav {
-    font-weight: 400;
-}
-
+/* Margins added to buttons so when set to a small viewport (eg. iphone) buttons don't stack */
 #navButtons button{
     margin: 5px;
 }
 
+/* simple styling for the icon in the navbar. Margin ensures wepage title doesnt stick too close to the icon and border radius for rounded edges
+for aesthetic purposes. */
 #navBrandIcon {
     margin-right: 10px;
     height: 30px;

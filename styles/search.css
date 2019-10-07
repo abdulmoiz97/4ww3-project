@@ -1,23 +1,25 @@
-div {
-    font-family: 'Montserrat'
+/* nav made transparent to leverage aesthetics of background image */
+nav {
+    background-color: transparent;
 }
 
+/* Styling used for button container on form. Flex chosen to allow for the vertical centering of the button. */
 #searchButton {
     display: flex;
     justify-content: center;
     align-items: center; 
 }
 
+/* form wasn't added into common.css as there are other forms on the webpages that don't require the below styling. Thus dry code was used
+in this instance */
+/* Padding added between border of form and content within for aesthetic spacing */
 form {
     padding: 10px;
     background-color: rgb(99, 99, 99,0.6);
 }
 
+/* Labels given a stronger font weight so they are easily legible against background */
 form label {
     font-weight: 500;
     color: white;
-}
-
-nav {
-    background-color: transparent;
 }
