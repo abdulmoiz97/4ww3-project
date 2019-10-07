@@ -1,7 +1,9 @@
+/* Universally applying the Montserrat font */
 div{
     font-family: 'Montserrat'
 }
 
+/* Scaling all images to their parents to ensure the image is also responsive */
 #googleMaps {
     width: 100%;
 }
