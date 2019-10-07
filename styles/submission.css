@@ -1,7 +1,7 @@
 /* form wasn't added into common.css as there are other forms on the webpages that don't require the below styling. Thus dry code was used
 in this instance */
 /* Padding added between border of form and content within for aesthetic spacing */
-form {
+#submissionForm {
     padding: 10px;
     background-color: rgb(99, 99, 99,0.6);
 }

@@ -46,7 +46,11 @@
                 <!-- Nav buttons are also contained in a similar unordered list. The buttons are styled using bootstraps btn class-->
                 <ul id="navButtons" class="nav navbar-nav">
                     <li><button class="btn btn-success btn-sm">Login</button></li>
-                    <li><button class="btn btn-success btn-sm">Register</button></li>
+                    <li>
+                        <form action="../src/registration.html" method="get">
+                            <button type="submit" class="btn btn-success btn-sm">Register</button>
+                        </form>
+                    </li>    
                 </ul>
             </nav>
         </div>
@@ -55,7 +59,7 @@
          <div class="centered" id="formContainer">
              <div id="formBox">
                  <!-- Form not given an action as the back end is not part of part 1 -->
-                 <form class="rounded">
+                 <form id="submissionForm" class="rounded">
                      <!-- Similar to the search form a simple bootstrap styled form tag is used. The simplest and logical input type is
                     used for each of the various required inputs. eg. Latitude is number, Description is a larger textarea etc... -->
                      <div class="form-row">

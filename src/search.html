@@ -47,7 +47,11 @@
                 <!-- Nav buttons are also contained in a similar unordered list. The buttons are styled using bootstraps btn class-->
                 <ul id="navButtons" class="nav navbar-nav">
                     <li><button class="btn btn-success btn-sm">Login</button></li>
-                    <li><button class="btn btn-success btn-sm">Register</button></li>
+                    <li>
+                        <form action="../src/registration.html" method="get">
+                            <button type="submit" class="btn btn-success btn-sm">Register</button>
+                         </form>
+                    </li>    
                 </ul>
             </nav>
         </div>
@@ -57,7 +61,7 @@
             <div id="formBox">
                 <!-- The search form currently is hard coded to link to the results_samples.html page -->
                 <!-- Bootstrap forms used for aesthetics -->
-                <form action="../src/results_sample.html" method="get" class="rounded">
+                <form id="searchForm" action="../src/results_sample.html" method="get" class="rounded">
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <!-- Simple text input used for user to be able to search by name -->
