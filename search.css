@@ -1,0 +1,23 @@
+div {
+    font-family: 'Montserrat'
+}
+
+#searchButton {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+form {
+    padding: 10px;
+    background-color: rgb(99, 99, 99,0.6);
+}
+
+form label {
+    font-weight: 500;
+    color: white;
+}
+
+nav {
+    background-color: transparent;
+}

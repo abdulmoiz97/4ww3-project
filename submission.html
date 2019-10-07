@@ -1,0 +1,83 @@
+<!-- 
+    Authors: Abdul Moiz & Mohid Makhdoomi
+ -->
+ <!-- Standard HTML-5 Boilerplate -->
+ <!DOCTYPE html>
+ <!-- Root element with language declaration -->
+ <html lang="en">
+     <!-- Meta data container -->
+     <head>
+         <!-- Meta data to ensure compatability with varying devices, viewports and character sets -->
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+         <link rel="stylesheet" href="../styles/common.css">
+         <link rel="stylesheet" href="../styles/submission.css">
+         <!-- Favicon for browser tab display (aesthetic purposes) -->
+         <link rel="icon" href="../images/favicon.png">
+         <!-- Bootstrap CDN to prevent website from looking hideous with approval from TA Yu -->
+         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+         <!-- Google fonts import -->
+         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Roboto:300,400,500&display=swap" rel="stylesheet">
+         <!-- Title tag for labeling in tab names of browsers -->
+         <title>Fit Finder</title>
+     </head>
+     <!-- Core content of page in body tag -->
+     <body>
+         <div class="centered" id="header">
+             <nav class="navbar navbar-expand navbar-dark fixed-top centered">
+                 <a class="navbar-brand" href="../src/search.html">
+                     <img src="../images/favicon.png" id="navBrandIcon" alt="Fit Finder" class="d-inline-block align-top">
+                     Fit Finder
+                 </a>
+                 <ul class="navbar-nav mr-auto">
+                     <li class="nav-item active">
+                         <a class="nav-link" href="../src/submission.html">Submit a Gym</a>
+                     </li>
+                 </ul>
+                 <ul id="navButtons" class="nav navbar-nav navbar-right">
+                     <button class="btn btn-success btn-sm">Login</button>
+                     <button class="btn btn-success btn-sm">Register</button>
+                 </ul>
+             </nav>
+         </div>
+ 
+         <div class="centered" id="formContainer">
+             <div id="formBox">
+                 <form class="rounded">
+                     <div class="form-row">
+                         <div class="form-group col-md-4">
+                             <label for="gymName">Gym Name</label>
+                             <input type="text" class="form-control" id="gymName">
+                         </div>
+                         <div class="form-group col-md-4">
+                             <label for="longitude">Longitude</label>
+                             <input type="number" class="form-control" id="longitude">
+                         </div>
+                         <div class="form-group col-md-4">
+                             <label for="latitude">Latitude</label>
+                             <input type="number" class="form-control" id="latitude">
+                         </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Gym Description</label>
+                        <textarea class="form-control" id="description" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Images</label>
+                        </div>
+                    </div>
+                 <div id="submitButton">
+                     <button type="submit" class="btn btn-success btn-block">Submit</button>
+                 </div>
+                 </form>
+             </div>
+         </div>
+ 
+         <div class="centered" id="footer">
+             <p>&copy; 2019 McMaster University. All Rights Reserved.</p>
+         </div>
+     </body>
+ </html>

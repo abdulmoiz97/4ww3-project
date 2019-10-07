@@ -1,0 +1,61 @@
+div{
+    font-family: 'Montserrat'
+}
+
+#googleMaps {
+    width: 100%;
+}
+
+#formContainer {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-image: url("../images/heroImage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#submitButton {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#formBox {
+    width: 50%;
+}
+
+#footer {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    height: 40px;
+    font-size: 12px;
+    background-color: #f0f0f0;
+}
+
+.centered{
+    margin: 0px auto;
+}
+
+#footer p{
+    margin-top: 10px;
+}
+
+nav {
+    font-weight: 400;
+}
+
+#navButtons button{
+    margin: 5px;
+}
+
+#navBrandIcon {
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
