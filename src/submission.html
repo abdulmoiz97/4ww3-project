@@ -28,7 +28,7 @@
         <div class="centered" id="header">
             <!-- HTML5 nav is used along with styling from bootstraps navbar classes. navbar-expand ensures that the navbar cannot collapse.
             A collapsing or "hamburger" navbar requires jQuery and js thus it was omitted from this part of the assignment -->
-            <nav class="navbar navbar-expand navbar-light centered">
+            <nav class="navbar navbar-expand navbar-dark fixed-top centered">
                 <!-- an anchor tag is used to contain a hyperlinked logo for the website -->
                 <a class="navbar-brand" href="../src/search.html">
                     <!-- the d-inlin-block and align-top classes are from the Bootstrap framework and ensure the image is flush to the left of the
@@ -50,10 +50,14 @@
                 </ul>
             </nav>
         </div>
- 
+        
+         <!-- Container of the actual gym submission form is used to style the image around the form for aesthetic purposes. -->
          <div class="centered" id="formContainer">
              <div id="formBox">
+                 <!-- Form not given an action as the back end is not part of part 1 -->
                  <form class="rounded">
+                     <!-- Similar to the search form a simple bootstrap styled form tag is used. The simplest and logical input type is
+                    used for each of the various required inputs. eg. Latitude is number, Description is a larger textarea etc... -->
                      <div class="form-row">
                          <div class="form-group col-md-4">
                              <label for="gymName">Gym Name</label>
@@ -68,6 +72,8 @@
                              <input type="number" class="form-control" id="latitude">
                          </div>
                     </div>
+                    <!-- Separate form groups were used to ensure everything is aeshetically laid out. This is done to mimic the layout
+                    of an actual hand filled form. -->
                     <div class="form-group">
                         <label for="description">Gym Description</label>
                         <textarea class="form-control" id="description" rows="3"></textarea>
@@ -90,6 +96,6 @@
             <!-- &copy is used to ensure we can insert it in a regular paragraph tag -->
             <p>&copy; 2019 McMaster University. All Rights Reserved.</p>
         </div>
-        
+
      </body>
  </html>

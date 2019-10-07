@@ -29,7 +29,7 @@
         <div class="centered" id="header">
             <!-- HTML5 nav is used along with styling from bootstraps navbar classes. navbar-expand ensures that the navbar cannot collapse.
             A collapsing or "hamburger" navbar requires jQuery and js thus it was omitted from this part of the assignment -->
-            <nav class="navbar navbar-expand navbar-light centered">
+            <nav class="navbar navbar-expand navbar-dark fixed-top centered">
                 <!-- an anchor tag is used to contain a hyperlinked logo for the website -->
                 <a class="navbar-brand" href="../src/search.html">
                     <!-- the d-inlin-block and align-top classes are from the Bootstrap framework and ensure the image is flush to the left of the
@@ -52,15 +52,21 @@
             </nav>
         </div>
 
+        <!-- Container of the actual search form is used to style the image around the form for aesthetic purposes. -->
         <div class="centered" id="formContainer">
             <div id="formBox">
+                <!-- The search form currently is hard coded to link to the results_samples.html page -->
+                <!-- Bootstrap forms used for aesthetics -->
                 <form action="../src/results_sample.html" method="get" class="rounded">
                     <div class="form-row">
                         <div class="form-group col-md-6">
+                            <!-- Simple text input used for user to be able to search by name -->
                             <label for="gymName">By Gym Name</label>
                             <input type="text" class="form-control" id="gymName">
                         </div>
                     <div class="form-group col-md-6">
+                        <!-- As requested user can also search by rating. This was accomplished using a Bootstrap styled select tag to create
+                        a drop down menu -->
                         <label for="byRating">By Rating</label>
                         <select id="byRating" class="form-control">
                             <option selected>Rating</option>
@@ -72,6 +78,7 @@
                         </select>
                     </div>
                 </div>
+                <!-- The search button simply triggers the action indicated at the start of the form tag -->
                 <div id="searchButton">
                     <button type="submit" class="btn btn-success btn-block">Search</button>
                 </div>
@@ -84,6 +91,6 @@
             <!-- &copy is used to ensure we can insert it in a regular paragraph tag -->
             <p>&copy; 2019 McMaster University. All Rights Reserved.</p>
         </div>
-        
+
     </body>
 </html>

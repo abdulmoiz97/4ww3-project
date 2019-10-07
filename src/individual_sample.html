@@ -19,33 +19,46 @@
          <!-- Bootstrap CDN to prevent website from looking hideous with approval from TA Yu -->
          <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
          <!-- Google fonts import -->
-         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Roboto:300,400,500&display=swap" rel="stylesheet">
+         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
          <!-- Title tag for labeling in tab names of browsers -->
          <title>Fit Finder</title>
      </head>
 
      <body>
+         <!-- This division is reversed for a reusable navigation menu with 4 links: register, log in, submit a gym and going to the home page -->
         <div class="centered" id="header">
+            <!-- HTML5 nav is used along with styling from bootstraps navbar classes. navbar-expand ensures that the navbar cannot collapse.
+            A collapsing or "hamburger" navbar requires jQuery and js thus it was omitted from this part of the assignment -->
             <nav class="navbar navbar-expand navbar-light centered">
+                <!-- an anchor tag is used to contain a hyperlinked logo for the website -->
                 <a class="navbar-brand" href="../src/search.html">
+                    <!-- the d-inlin-block and align-top classes are from the Bootstrap framework and ensure the image is flush to the left of the
+                    navbar -->
                     <img src="../images/favicon.png" id="navBrandIcon" alt="Fit Finder" class="d-inline-block align-top">
                     Fit Finder
                 </a>
+                <!-- The submit a gym link is done through a standard navbar anchor tag with Bootstrap styling. mr-auto class ensures that all elements
+                added to the right of the anchor tag are flush to the right of the navbar -->
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="../src/submission.html">Submit a Gym</a>
                     </li>
                 </ul>
-                <ul id="navButtons" class="nav navbar-nav navbar-right">
-                    <button class="btn btn-success btn-sm">Login</button>
-                    <button class="btn btn-success btn-sm">Register</button>
+                <!-- Nav buttons are also contained in a similar unordered list. The buttons are styled using bootstraps btn class-->
+                <ul id="navButtons" class="nav navbar-nav">
+                    <li><button class="btn btn-success btn-sm">Login</button></li>
+                    <li><button class="btn btn-success btn-sm">Register</button></li>
                 </ul>
             </nav>
         </div>
 
+        <!-- Below div is where the gym details are contained. A Bootstrap container is used along with the grid system. This allows for easy
+        scaling of web page when viewport size is adjusted. Each row presents elements that are to be put side by side, a cut off width is prescriped
+        via bootstrap to ensure columns cascade vertically -->
         <div id="gymContainer" class="container">
             <div class="row">
                 <div class="col">
+                    <!-- Bootstrap jumbotron used to present gym name and details -->
                     <div id="gymHeader" class="jumbotron jumbotron-fluid">
                         <div class="container">
                             <h1 class="display-4">World Gym</h1>
@@ -56,9 +69,13 @@
             </div>
             <div class="row">
                 <div class="col-md-8">
+                    <!-- The gym details below are hard coded for part 1 -->
                     <p id="gymDetails">In a pleasant and inviting, 8000 sq. foot facility, we provide an atmosphere that is positive and relaxed - with very reasonable rates. We keep our focus on the individual attention to a few clients interested in a balanced, healthy lifestyle, not thousands of members.
                     <br><br>Amenities Include: Full weightlifting equipment, heavy bags, treadmills, cardio room and newly furnished yoga studio.</p>
                     <h2>Reviews</h2>
+                    
+                    <!-- Reviews are listed using an unumbered list and line items with no bullet points. Within each line item is the name of the reviewer,
+                    rating and comments on the location. Different lines of the review are separated into Divs to allow for varying styles within the element -->
                     <ul id="reviews">
                         <li>
                             <img src="../images/person1.jpg" alt="">
@@ -86,14 +103,18 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4">
+                    <!-- Image is hard coded for part 1 -->
                     <img id="googleMaps" class="img-responsive" src="../images/googleMaps.PNG" alt="">
                 </div>
             </div>
         </div>
 
-         <div class="centered" id="footer">
+        <!-- Footer for webpage simply has copy write information -->
+        <div class="centered" id="footer">
+            <!-- &copy is used to ensure we can insert it in a regular paragraph tag -->
             <p>&copy; 2019 McMaster University. All Rights Reserved.</p>
         </div>
+
      </body>
-     </html>
+ </html>
