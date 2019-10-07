@@ -1,0 +1,99 @@
+<!-- 
+    Authors: Abdul Moiz & Mohid Makhdoomi
+ -->
+ <!-- Standard HTML-5 Boilerplate -->
+ <!DOCTYPE html>
+ <!-- Root element with language declaration -->
+ <html lang="en">
+     <!-- Meta data container -->
+     <head>
+         <!-- Meta data to ensure compatability with varying devices, viewports and character sets -->
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+         <!-- Links to stylesheets -->
+         <link rel="stylesheet" href="../styles/common.css">
+         <link rel="stylesheet" href="../styles/individual_sample.css">
+         <!-- Favicon for browser tab display (aesthetic purposes) -->
+         <link rel="icon" href="../images/favicon.png">
+         <!-- Bootstrap CDN to prevent website from looking hideous with approval from TA Yu -->
+         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+         <!-- Google fonts import -->
+         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Roboto:300,400,500&display=swap" rel="stylesheet">
+         <!-- Title tag for labeling in tab names of browsers -->
+         <title>Fit Finder</title>
+     </head>
+
+     <body>
+        <div class="centered" id="header">
+            <nav class="navbar navbar-expand navbar-light centered">
+                <a class="navbar-brand" href="../src/search.html">
+                    <img src="../images/favicon.png" id="navBrandIcon" alt="Fit Finder" class="d-inline-block align-top">
+                    Fit Finder
+                </a>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../src/submission.html">Submit a Gym</a>
+                    </li>
+                </ul>
+                <ul id="navButtons" class="nav navbar-nav navbar-right">
+                    <button class="btn btn-success btn-sm">Login</button>
+                    <button class="btn btn-success btn-sm">Register</button>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="gymContainer" class="container">
+            <div class="row">
+                <div class="col">
+                    <div id="gymHeader" class="jumbotron jumbotron-fluid">
+                        <div class="container">
+                            <h1 class="display-4">World Gym</h1>
+                            <p class="lead">4.2 Stars (98 reviews) <br>(647) 350-5288 <br> 844 Bloor St W, Christie Pits</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <p id="gymDetails">In a pleasant and inviting, 8000 sq. foot facility, we provide an atmosphere that is positive and relaxed - with very reasonable rates. We keep our focus on the individual attention to a few clients interested in a balanced, healthy lifestyle, not thousands of members.
+                    <br><br>Amenities Include: Full weightlifting equipment, heavy bags, treadmills, cardio room and newly furnished yoga studio.</p>
+                    <h2>Reviews</h2>
+                    <ul id="reviews">
+                        <li>
+                            <img src="../images/person1.jpg" alt="">
+                            <div class="details">
+                                <div><strong>Abdul Moiz</strong></div>
+                                <div>5 Stars ($$)</div>
+                                <p>This is my go to gym for all my needs. All ammenities are provided in a clean and suportive environment</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="../images/person2.jpg" alt="">
+                            <div class="details">
+                                <div><strong>Mohid Makhdoomi</strong></div>
+                                <div>4.2 Stars ($$$)</div>
+                                <p>Ever since my injury I needed a gym that I can accomodate my ever changing schedule and body. World gym has everything I needed along with a flexible schedule</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="../images/person3.jpg" alt="">
+                            <div class="details">
+                                <div><strong>Sally Smith</strong></div>
+                                <div>4.7 Stars ($$)</div>
+                                <p>Good price. Good people. Good equipment. Need I say more?</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <img id="googleMaps" class="img-responsive" src="../images/googleMaps.PNG" alt="">
+                </div>
+            </div>
+        </div>
+
+         <div class="centered" id="footer">
+            <p>&copy; 2019 McMaster University. All Rights Reserved.</p>
+        </div>
+     </body>
+     </html>
