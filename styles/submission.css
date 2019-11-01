@@ -12,7 +12,29 @@ form label {
     color: white;
 }
 
+/* Styling used for button container on form. Flex chosen to allow for the vertical centering of the button. */
+#buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+/* location button styling */
+#locationButton {
+    cursor: pointer;
+    margin-left: 5px;
+    margin-bottom: 0px;
+}
+
+#submitButton {
+    margin-right: 5px;
+}
+
 /* nav made transparent to leverage aesthetics of background image */
 nav {
     background-color: transparent;
+}
+
+.navbar-toggler-icon {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger7.svg?color=fff') !important;
 }

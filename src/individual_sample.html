@@ -18,18 +18,23 @@
          <link rel="icon" href="../images/favicon.png">
          <!-- Bootstrap CDN to prevent website from looking hideous with approval from TA Yu -->
          <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+         <!-- JS file link for this page -->
+         <script src="../scripts/individual_sample.js"></script>          
          <!-- Google fonts import -->
          <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
-         <!-- Title tag for labeling in tab names of browsers -->
+         <!-- Script tag for google maps API -->
+         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJaN3HEdiPTG4Kh1gW0A2spA4-CbB52vk&callback=initMap"> </script>     
+         <!-- Title tag for labeling in tab names of browsers -->         
          <title>Fit Finder</title>
      </head>
 
      <body>
          <!-- This division is reversed for a reusable navigation menu with 4 links: register, log in, submit a gym and going to the home page -->
         <div class="centered" id="header">
-            <!-- HTML5 nav is used along with styling from bootstraps navbar classes. navbar-expand ensures that the navbar cannot collapse.
-            A collapsing or "hamburger" navbar requires jQuery and js thus it was omitted from this part of the assignment -->
-            <nav class="navbar navbar-expand navbar-light centered">
+            <!-- HTML5 nav is used along with styling from bootstraps navbar classes.-->
+            <nav class="navbar navbar-expand-lg navbar-light centered">
                 <!-- an anchor tag is used to contain a hyperlinked logo for the website -->
                 <a class="navbar-brand" href="../src/search.html">
                     <!-- the d-inlin-block and align-top classes are from the Bootstrap framework and ensure the image is flush to the left of the
@@ -44,8 +49,12 @@
                         <a class="nav-link" href="../src/submission.html">Submit a Gym</a>
                     </li>
                 </ul>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dropdown" aria-controls="dropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <!-- Nav buttons are also contained in a similar unordered list. The buttons are styled using bootstraps btn class-->
-                <ul id="navButtons" class="nav navbar-nav">
+                <div class="collapse navbar-collapse" id="dropdown">
+                <ul id="navButtons" class="nav navbar-nav ml-auto">
                     <li><button class="btn btn-success btn-sm">Login</button></li>
                     <li>
                         <form action="../src/registration.html" method="get">
@@ -53,6 +62,7 @@
                         </form>
                     </li>    
                 </ul>
+            </div>
             </nav>
         </div>
 
@@ -107,9 +117,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-4">
-                    <!-- Image is hard coded for part 1 -->
-                    <img id="googleMaps" class="img-responsive" src="../images/googleMaps.PNG" alt="">
+                <div id="map" class="col-lg-4">
                 </div>
             </div>
         </div>

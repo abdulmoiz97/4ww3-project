@@ -15,8 +15,12 @@
          <link rel="stylesheet" href="../styles/submission.css">
          <!-- Favicon for browser tab display (aesthetic purposes) -->
          <link rel="icon" href="../images/favicon.png">
+         <script src="../scripts/submission.js"></script>         
          <!-- Bootstrap CDN to prevent website from looking hideous with approval from TA Yu -->
          <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />         
          <!-- Google fonts import -->
          <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">         
          <!-- Title tag for labeling in tab names of browsers -->
@@ -26,9 +30,8 @@
      <body>
         <!-- This division is reversed for a reusable navigation menu with 4 links: register, log in, submit a gym and going to the home page -->
         <div class="centered" id="header">
-            <!-- HTML5 nav is used along with styling from bootstraps navbar classes. navbar-expand ensures that the navbar cannot collapse.
-            A collapsing or "hamburger" navbar requires jQuery and js thus it was omitted from this part of the assignment -->
-            <nav class="navbar navbar-expand navbar-dark fixed-top centered">
+            <!-- HTML5 nav is used along with styling from bootstraps navbar classes.-->
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top centered">
                 <!-- an anchor tag is used to contain a hyperlinked logo for the website -->
                 <a class="navbar-brand" href="../src/search.html">
                     <!-- the d-inlin-block and align-top classes are from the Bootstrap framework and ensure the image is flush to the left of the
@@ -43,15 +46,20 @@
                         <a class="nav-link" href="../src/submission.html">Submit a Gym</a>
                     </li>
                 </ul>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dropdown" aria-controls="dropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="dropdown">
                 <!-- Nav buttons are also contained in a similar unordered list. The buttons are styled using bootstraps btn class-->
-                <ul id="navButtons" class="nav navbar-nav">
+                <ul id="navButtons" class="nav navbar-nav ml-auto">
                     <li><button class="btn btn-success btn-sm">Login</button></li>
                     <li>
                         <form action="../src/registration.html" method="get">
                             <button type="submit" class="btn btn-success btn-sm">Register</button>
-                        </form>
+                         </form>
                     </li>    
                 </ul>
+            </div>
             </nav>
         </div>
         
@@ -65,22 +73,26 @@
                      <div class="form-row">
                          <div class="form-group col-md-4">
                              <label for="gymName">Gym Name</label>
-                             <input type="text" class="form-control" id="gymName">
+                             <!-- Required field for validation -->
+                             <input type="text" class="form-control" id="gymName" required>
                          </div>
                          <div class="form-group col-md-4">
                              <label for="longitude">Longitude</label>
-                             <input type="number" class="form-control" id="longitude">
+                             <!-- Required field for validation also restricted to numerical inputs only -->
+                             <input type="number" step="any" class="form-control" id="longitude" required>
                          </div>
                          <div class="form-group col-md-4">
                              <label for="latitude">Latitude</label>
-                             <input type="number" class="form-control" id="latitude">
+                             <!-- Required field for validation also restricted to numerical inputs only -->
+                             <input type="number" step="any" class="form-control" id="latitude" required>
                          </div>
                     </div>
                     <!-- Separate form groups were used to ensure everything is aeshetically laid out. This is done to mimic the layout
                     of an actual hand filled form. -->
                     <div class="form-group">
                         <label for="description">Gym Description</label>
-                        <textarea class="form-control" id="description" rows="3"></textarea>
+                        <!-- Required field for validation with a max length to prevent spam -->
+                        <textarea class="form-control" id="description" rows="3" maxlength="500" required></textarea>
                     </div>
                     <div class="form-group">
                         <div class="custom-file">
@@ -88,8 +100,9 @@
                             <label class="custom-file-label" for="customFile">Images</label>
                         </div>
                     </div>
-                 <div id="submitButton">
-                     <button type="submit" class="btn btn-success btn-block">Submit</button>
+                 <div id="buttons">
+                     <button id="submitButton" type="submit" class="btn btn-success btn-block">Submit</button>
+                    <label id="locationButton" onclick="getLocation()" class="btn btn-success"><i class="fa fa-map-marker-alt "></i></label>
                  </div>
                  </form>
              </div>

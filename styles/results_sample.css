@@ -3,6 +3,19 @@ nav {
     background-color: #f0f0f0;
 }
 
+p {
+    font-size: 12px;
+}
+
+/* Dimensions and margin added for Google Maps live map */
+#map {
+    height: 300px;
+    width: 300px;
+    padding: 10px;
+    margin: 0px auto;
+    margin-bottom: 20px;
+}
+
 /* container for results details such as reviews, description etc... Margins added so it does not stay flush with the header or footer */
 #resultsContainer {
     margin-top: 30px;
@@ -42,6 +55,6 @@ text content can appear beside the image. */
     display: inline-block;
 }
 
-p {
-    font-size: 12px;
+.navbar-toggler-icon {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger7.svg?color=000') !important;
 }

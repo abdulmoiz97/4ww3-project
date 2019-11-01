@@ -4,10 +4,27 @@ nav {
 }
 
 /* Styling used for button container on form. Flex chosen to allow for the vertical centering of the button. */
-#searchButton {
+#buttons {
     display: flex;
     justify-content: center;
     align-items: center; 
+}
+
+/* Styling for location button with pin icon */
+#locationButton {
+    cursor: pointer;
+    margin-left: 5px;
+    margin-bottom: 0px;
+}
+
+/* Hamburger icon image */
+.navbar-toggler-icon {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger7.svg?color=fff') !important;
+}
+
+/* Styling for large search button */
+#searchButton {
+    margin-right: 5px;
 }
 
 /* form styling wasn't added into common.css as there are other forms on the webpages that don't require the below styling. Thus dry code was used

@@ -54,6 +54,19 @@ text content can appear beside the image. */
     font-size: 12px;
 }
 
+/* Dimensions and margin added for Google Maps live map */
+#map {
+    height: 300px;
+    width: 300px;
+    padding: 10px;
+    margin: 0px auto;
+    margin-bottom: 20px;
+}
+
+.navbar-toggler-icon {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger7.svg?color=000') !important;
+}
+
 /* Simple styling to "Reviews" heading. */
 h2{
     border-top: solid 1px #e6e6e6;
