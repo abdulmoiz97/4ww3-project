@@ -11,7 +11,7 @@ nav {
 
 /* styling added to the Bootstrap jumbotron. Includes a semi transparent background image and white text color */
 #gymHeader {
-    background-image: url("../images/gymHeaderBG.jpg");
+    background-image: url("../images/testimage.jpg");
     opacity: 0.7;
     background-size: cover;
     color: white;
@@ -22,13 +22,20 @@ reviews (using li's) within. */
 #reviews {
     padding-left: 0px;
     list-style-type: none;
+    max-height: 400px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+}
+
+#reviews::-webkit-scrollbar {
+    display: none;
 }
 
 /* Actual review items are given a bottom border for styling and separation. Height is hard coded so it is still readable and aesthetically
 pleasing when viewport is scaled down in size. Flex display used to vertically center contents within */
 #reviews li{
     border-bottom: solid 1px #e6e6e6;
-    height: 170px;
+    height: 120px;
     padding: 10px;
     display: flex;
     align-items: center; 

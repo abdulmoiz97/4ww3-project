@@ -12,6 +12,18 @@ div{
     border-color: transparent !important;
 }
 
+.validation {
+    font-weight: 500;
+    color: #ffb133 !important;
+    font-size: 12px;
+}
+
+.success {
+    font-weight: 500;
+    color: white;
+    text-align: center;
+}
+
 /* Scaling all images to their parents to ensure the image is also responsive */
 #googleMaps {
     width: 100%;

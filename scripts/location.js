@@ -8,7 +8,7 @@ function getLocation() {
   }
 
 // This function saves the location to variables and also prints them to the console to confirm functionality. The values for longitude and
-// latitude are printed back into the input boxes on the page
+// latitude are printed back into the input boxes on the page.
 function savePosition(location) {
     var latitude = location.coords.latitude;
     var longitude = location.coords.longitude;

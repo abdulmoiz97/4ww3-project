@@ -26,7 +26,14 @@ p {
 results (using li's) within. */
 #tabular {
     padding-left: 0px;
-    list-style-type: none;
+    list-style-type: none;    
+    max-height: 510px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+}
+
+#reviews::-webkit-scrollbar {
+    display: none;
 }
 
 /* Actual result items are given a bottom border for styling and separation. Height is hard coded so it is still readable and aesthetically
